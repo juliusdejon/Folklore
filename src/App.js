@@ -14,9 +14,9 @@ class App extends Component {
     };
   }
 
+  
   componentDidMount(){
     this.setState({ isLoading: true });
-
     fetch("https://jsonplaceholder.typicode.com/posts").then(response => response.json()).then(data => {
       this.setState({ posts: data,
         isLoading: false })
@@ -26,7 +26,6 @@ class App extends Component {
 
   render() {
     const { posts, isLoading } = this.state;
-    console.log(posts)
     return (
       <div className="App">
       <img src={logo} className="App-logo" alt="logo" />
