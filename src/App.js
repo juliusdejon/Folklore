@@ -32,7 +32,7 @@ class App extends Component {
       <img src={logo} className="App-logo" alt="logo" />
         <div className="App-main">
         <ul>
-          { !isLoading ? (<Spinner name="ball-pulse-sync" />) :
+          { isLoading ? (<Spinner name="ball-pulse-sync" />) :
             (posts.map(post =>  
             <li key={post.id}>
               {post.title}
